@@ -1,0 +1,20 @@
+current directory: /Users/endotakeru/rails_myapp/.bundle/ruby/3.2.0/gems/racc-1.7.3/ext/racc/cparse
+/Users/endotakeru/.rbenv/versions/3.2.3/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /Users/endotakeru/rails_myapp/.bundle/ruby/3.2.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240416-69953-2ew61s sitelibdir\=./.gem.20240416-69953-2ew61s clean
+
+current directory: /Users/endotakeru/rails_myapp/.bundle/ruby/3.2.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240416-69953-2ew61s sitelibdir\=./.gem.20240416-69953-2ew61s
+compiling cparse.c
+linking shared-object racc/cparse.bundle
+ld: warning: -multiply_defined is obsolete
+ld: warning: ignoring duplicate libraries: '-lruby.3.2'
+
+current directory: /Users/endotakeru/rails_myapp/.bundle/ruby/3.2.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240416-69953-2ew61s sitelibdir\=./.gem.20240416-69953-2ew61s install
+/usr/bin/install -c -m 0755 cparse.bundle ./.gem.20240416-69953-2ew61s/racc
+
+current directory: /Users/endotakeru/rails_myapp/.bundle/ruby/3.2.0/gems/racc-1.7.3/ext/racc/cparse
+make DESTDIR\= sitearchdir\=./.gem.20240416-69953-2ew61s sitelibdir\=./.gem.20240416-69953-2ew61s clean
