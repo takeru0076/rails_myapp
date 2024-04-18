@@ -1,0 +1,19 @@
+<%= form_with scope: resource, as: resource_name, url: session_path(resource_name), class: "space-y-6 w-1/2 max-w-sm", local: true do |f| %>
+  <label>ログイン</label>
+  <div>
+    <label>
+      メールアドレス
+    </label>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "test@example.com" %>
+  </div>
+  <div>
+    <label>
+      パスワード
+    </label>
+    <%= f.password_field :password, autocomplete: "password", placeholder: "pass1234" %>
+  </div>
+
+  <button type="submit" >
+    <%= f.submit "ログイン" %>
+  </button>
+<% end %>
