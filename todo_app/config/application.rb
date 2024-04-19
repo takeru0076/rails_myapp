@@ -8,6 +8,8 @@ module TodoApp
   class Application < Rails::Application
     config.load_defaults 7.1
 
+    config.i18n.default_locale = :ja
+
     config.autoload_lib(ignore: %w(assets tasks))
 
     config.generators do |g|
