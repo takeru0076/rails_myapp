@@ -18,6 +18,20 @@ ja:
               invalid: "は有効でありません。"
             password_confirmation:
               confirmation: "が一致していません。"
+        daily_summary:
+          attributes:
+            date:
+              blank: "が入力されていません。"
+            todos_completed_count:
+              greater_than_or_equal_to: "は0以上の値にしてください。"
+            user:
+              required: "が入力されていません。"
+        todo:
+          attributes:
+            title:
+              blank: "が入力されていません。"
+            daily_summary:
+              required: "が入力されていません。"
     attributes:
       user:
         nickname: "ニックネーム"
