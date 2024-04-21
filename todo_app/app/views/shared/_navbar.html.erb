@@ -5,6 +5,9 @@
       <ul>
         <% if current_user %>
           <li>
+            <%= link_to "todoを書き出す", new_todo_path %>
+          </li>
+          <li>
             <%= button_to "ログアウト", destroy_user_session_path, method: :delete %>
           </li>
         <% else %>
