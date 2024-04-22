@@ -6,4 +6,5 @@ class User < ApplicationRecord
 
   validates :nickname, presence: true, length: {maximum: 20}
   has_many :daily_summaries
+  has_many :todos, through: :daily_summaries
 end

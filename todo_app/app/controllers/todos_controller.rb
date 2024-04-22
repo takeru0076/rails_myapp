@@ -2,7 +2,7 @@ class TodosController < ApplicationController
   before_action :authenticate_user!
 
   def index
-    @todos = Todo.all
+    @todos = current_user.todos
   end
 
   def new
@@ -14,7 +14,8 @@ class TodosController < ApplicationController
     #@todo.save
     #redirect_to root_path #todosに変更
 
-    @todo = Todo.new(todo_params)
+    @todo = current_user.todos.build(todo_params)
+
     if @todo.save
       flash[:notice] = '投稿しました'
       redirect_to root_path # 一時的にトップページへリダイレクト(要修正)
@@ -22,6 +23,8 @@ class TodosController < ApplicationController
       flash[:alert] = '投稿に失敗しました'
       render :new
     end
+
+    create_daily_summary(current_user)
   end
 
   def edit
