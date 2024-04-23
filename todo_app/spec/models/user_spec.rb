@@ -55,4 +55,20 @@ describe User do
       end
     end
   end
+
+  describe '紐づくDailySummaryの情報を取得' do
+    before do
+      @user = create(:user)
+      @daily_summary = create(:daily_summary, user_id: @user.id, date: Date.today, todos_completed_count: 5)
+    end
+
+    subject { described_class.first }
+
+    it '紐づくDailySummaryの情報を取得できる' do
+      expect(subject.daily_summaries.size).to eq(1)
+      expect(subject.daily_summaries.first.date).to eq(Date.today)
+      expect(subject.daily_summaries.first.todos_completed_count).to eq(5)
+      expect(subject.daily_summaries.first.user_id).to eq(@user.id)
+    end
+  end
 end

@@ -50,3 +50,4 @@ class TodosController < ApplicationController
     params.require(:todo).permit(:content, :is_done)
   end
 end
+
