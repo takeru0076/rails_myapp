@@ -1,0 +1,15 @@
+<h1>Todo 詳細</h1>
+
+<p>内容: <%= @todo.content %></p>
+
+<p>完了済み: <%= @todo.is_done ? "はい" : "いいえ" %></p>
+
+<p>作成日時: <%= @todo.created_at.strftime("%Y年%m月%d日 %H時%M分%S秒") %></p>
+
+<p>更新日時: <%= @todo.updated_at.strftime("%Y年%m月%d日 %H時%M分%S秒") %></p>
+
+<a href="<%= todos_path %>">一覧へ戻る</a>
+
+<a href="<%= edit_todo_path(@todo) %>">編集</a>
+
+<a href="<%= delete_todo_path(@todo) %>">削除</a>

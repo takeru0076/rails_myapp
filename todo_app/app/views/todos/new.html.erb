@@ -1,4 +1,12 @@
-<div>
-  <h1 class="font-bold text-4xl">Todos#create</h1>
-  <p>Find me in app/views/todos/create.html.erb</p>
-</div>
+<h1>新規 Todo 作成</h1>
+
+<%= form_with model: @todo do |form| %>
+  <div class="form-group">
+    <%= form.label :content, "内容" %>
+    <%= form.text_field :content, class: "form-control" %>
+  </div>
+
+  <button type="submit" class="btn btn-primary">作成</button>
+<% end %>
+
+<%= link_to "一覧へ戻る", todos_path, class: "btn btn-secondary" %>
