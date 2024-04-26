@@ -28,6 +28,7 @@ gem "jbuilder"
 
 gem 'bootstrap', '~> 5.1.3'
 
+gem 'devise'
 
 # Use Redis adapter to run Action Cable in production
 # gem "redis", ">= 4.0.1"

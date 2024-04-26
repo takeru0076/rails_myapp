@@ -1,0 +1,38 @@
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-lg-6">
+      <div class="card mt-5">
+        <div class="card-body">
+          <h2 class="text-center mb-4">Sign up</h2>
+
+          <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= render "devise/shared/error_messages", resource: resource %>
+
+            <div class="form-floating mb-3">
+              <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "form-control", id: "floatingEmail" %>
+              <%= f.label :email, "Email address", class: "form-label", for: "floatingEmail" %>
+            </div>
+
+            <div class="form-floating mb-3">
+              <%= f.password_field :password, autocomplete: "new-password", class: "form-control", id: "floatingPassword" %>
+              <%= f.label :password, "Password", class: "form-label", for: "floatingPassword" %>
+            </div>
+
+            <div class="form-floating mb-3">
+              <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "form-control", id: "floatingPasswordConfirmation" %>
+              <%= f.label :password_confirmation, "Password confirmation", class: "form-label", for: "floatingPasswordConfirmation" %>
+            </div>
+
+            <div class="d-grid gap-2">
+              <%= f.submit "Sign up", class: "btn btn-primary btn-lg" %>
+            </div>
+          <% end %>
+
+          <div class="text-center mt-3">
+            <%= render "devise/shared/links" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
