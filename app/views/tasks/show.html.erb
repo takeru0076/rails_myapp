@@ -1,0 +1,16 @@
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="card shadow">
+        <div class="card-body">
+          <h1 class="card-title mb-4"><%= @task.title %></h1>
+          <p class="card-text"><%= @task.description %></p>
+          <p class="card-text"><strong>Status:</strong> <%= @task.completed ? 'Completed' : 'Incomplete' %></p>
+          <div class="text-center">
+            <%= link_to 'Back', tasks_path, class: 'btn btn-outline-secondary mt-3' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
